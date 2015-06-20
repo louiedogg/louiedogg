@@ -1,0 +1,90 @@
+#! /usr/bin/perl
+
+# Copyright 2015 LouieDogg LLC
+my $author = "admin\@louiedogg.com";
+# ####################################################################
+# Description: The logging of files
+#
+#This is in php.  Needs to per rewritten to perl
+#
+# License:GPLv2
+#
+# ####################################################################
+use strict;
+use warnings;
+
+package louiedogg_logger	
+		
+		
+		
+		public function csv_write($file, $key_arr, $val_arr) 
+		{				
+								
+			$filename = strstr( $file, '.', true);
+						
+			$seq_name = $filename."_seq";
+			$time_name = $filename."_dateTime";
+						
+			array_unshift($key_arr, "$seq_name", "$time_name");
+			
+			$key_string = rtrim(implode(',', $key_arr), ',');
+			$time = time();
+						
+			if (file_exists($file))
+			{
+				$fp = open(FILE, ">$file");
+				@rows = <FILE>;
+				close(FILE);
+				@last_row = pop($rows);
+				$data = str_getcsv($last_row);
+				$id = $data[0];
+				$id++;
+
+				fclose($fp);
+									
+				array_unshift($val_arr, "$id", "$time");	
+				
+				$value_string = rtrim(implode(',', $val_arr), ',');
+							
+				$value_string = "$value_string\n";
+				
+				$fp = fopen($file, 'a');
+				$write = fwrite($fp, $value_string);
+				
+				if ($write)
+				{
+					print '<p>'.$id $tag $file $message.'</p>';
+				}
+				elsif
+				{
+					
+				}
+				else
+				{
+					print '<p>You have a problem with writing the file</p>';
+				}
+				fclose($fp);
+						
+			}		
+			else
+			{
+				//mkdir("$_SERVER['DOCUMENT_ROOT']"."/test/db/", 0755, true);
+				$key_string = "$key_string\n";
+				
+				$seq=1000;
+				++$seq;
+				array_unshift($val_arr, "$seq", "$time");	
+				
+				$value_string = rtrim(implode(',', $val_arr), ',');
+				
+				$value_string ="$value_string\n";
+				
+				$fp = fopen($file, 'a');
+				fwrite($fp, $key_string);
+				fwrite($fp, $value_string);
+				fclose($fp);
+				print '<p>You have created a new file and written two lines to it';
+			}
+			
+						
+		}
