@@ -1,0 +1,20 @@
+{
+   "dogg_error" : {
+      "10000" : {
+         "date_time" : "2015-06-21 17:14:47",
+         "file" : "dogg/dogg_main.pm",
+         "key" : "10000",
+         "line" : "45",
+         "message" : "Error:",
+         "status" : "0"
+      },
+      "10001" : {
+         "date_time" : "2015-06-21 17:14:56",
+         "file" : "dogg/dogg_main.pm",
+         "key" : "10001",
+         "line" : "45",
+         "message" : "Error:",
+         "status" : "0"
+      }
+   }
+}

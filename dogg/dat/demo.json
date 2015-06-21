@@ -1,0 +1,43 @@
+{
+   "demo" : {
+      "10000" : {
+         "bin" : "bin_creamery",
+         "dat" : "dat_creamery",
+         "date_time" : "2015-06-20 22:51:25",
+         "demo_dir" : "demo_creamery",
+         "image" : "demo_creamery_image.png",
+         "key" : "10000",
+         "label" : "Creamery",
+         "name" : "creamery",
+         "permission" : "100",
+         "repo" : "https://github.com/revenuerivertechnologies/demo_creamery.git",
+         "status" : "0"
+      },
+      "10001" : {
+         "bin" : "bin_breakfast",
+         "dat" : "dat_breakfast",
+         "date_time" : "2015-06-20 23:12:16",
+         "demo_dir" : "demo_breakfast",
+         "image" : "demo_breakfast_image.png",
+         "key" : "10001",
+         "label" : "Breakfast",
+         "name" : "breakfast",
+         "permission" : "100",
+         "repo" : "https://github.com/revenuerivertechnologies/demo_breakfast.git",
+         "status" : "0"
+      },
+      "10002" : {
+         "bin" : "bin_mexican",
+         "dat" : "dat_mexican",
+         "date_time" : "2015-06-20 23:39:52",
+         "demo_dir" : "demo_mexican",
+         "image" : "demo_mexican_image.png",
+         "key" : "10003",
+         "label" : "Mexican",
+         "name" : "mexican",
+         "permission" : "100",
+         "repo" : "https://github.com/revenuerivertechnologies/demo_mexican.git",
+         "status" : "0"
+      }
+   }
+}

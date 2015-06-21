@@ -1,0 +1,23 @@
+#! /usr/bin/perl
+
+use CGI;
+
+$cgi = new CGI;
+
+$cgi->start_html
+(
+	-title=>'Image Map'
+
+),
+
+$cgi->start_form,
+$cgi->image_button
+(
+	-name=>'beatles',
+	-src=>'',
+	-width=>360,
+	-height=>99
+
+),
+
+$cgi->end_form;
