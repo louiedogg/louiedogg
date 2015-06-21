@@ -1,0 +1,18 @@
+{
+   "dogg_version" : {
+      "10000" : {
+         "date_time" : "2015-06-20 20:53:30",
+         "key" : "10000",
+         "message" : "First Update, First Version",
+         "readable" : "0.10000",
+         "version" : "0"
+      },
+      "10001" : {
+         "date_time" : "2015-06-20 20:53:33",
+         "key" : "10001",
+         "message" : "Next Version",
+         "readable" : "0.10001",
+         "version" : "0"
+      }
+   }
+}

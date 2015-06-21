@@ -1,0 +1,44 @@
+{
+   "demo" : {
+      "breakfast" : {
+         "bin" : "bin_breakfast",
+         "dat" : "dat_breakfast",
+         "demo_directory" : "demo_breakfast",
+         "image" : "demo_breakfast_image.png",
+         "key" : "1000",
+         "label" : "Breakfast",
+         "repo" : "https://github.com/revenuerivertechnologies/demo_breakfast.git",
+         "status" : "1"
+      },
+      "burger" : {
+         "bin" : "bin_burger",
+         "dat" : "dat_burger",
+         "demo_directory" : "demo_burger",
+         "image" : "demo_burger_image.png",
+         "key" : "1001",
+         "label" : "Burger",
+         "repo" : "https://github.com/revenuerivertechnologies/demo_burger.git",
+         "status" : "1"
+      },
+      "deli" : {
+         "bin" : "bin_deli",
+         "dat" : "dat_deli",
+         "demo_directory" : "demo_deli",
+         "image" : "demo_deli_image.png",
+         "key" : "1002",
+         "label" : "Deli",
+         "repo" : "https://github.com/revenuerivertechnologies/demo_deli.git",
+         "status" : "1"
+      },
+      "mexican" : {
+         "bin" : "bin_mexican",
+         "dat" : "dat_mexican",
+         "demo_directory" : "demo_mexican",
+         "image" : "demo_mexican_image.png",
+         "key" : "1003",
+         "label" : "Mexican",
+         "repo" : "https://github.com/revenuerivertechnologies/demo_mexican.git",
+         "status" : "1"
+      }
+   }
+}

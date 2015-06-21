@@ -1,0 +1,118 @@
+#! /usr/bin/perl
+
+# Copyright 2015 LouieDogg LLC
+my $author = "admin\@louiedogg.com";
+# ####################################################################
+# Description: Everything is a module
+#
+# License:GPLv2
+#
+# ####################################################################
+use strict;
+use warnings;
+
+																		#############################
+																		# RUN MAIN LOOP 		
+																		# DOGG HOSPITALITY			
+																		#############################
+																		
+																		######## LIBRARIES ##########																# Current Working Directory
+use lib 'dogg';															# Use main/ as a lib
+use lib 'dogg/widgets';
+use lib 'dogg/web';
+
+
+
+sub dogg_run
+{
+	my $arg_count = @_;
+	my $arg_one = shift;
+	my $arg_two = shift;
+	
+	use dogg_main;
+	use dogg_cwd;
+	use dogg_lib;														# Main Loop Module
+	use dogg_json;
+	
+	# Help menu array
+	my @help = (
+				"--help			Will display this menu\n",
+				"--web			Runs Web Interface\n",
+				"--widget 		Runs Widget Interface\n",
+<<<<<<< HEAD
+				"--rsync 		Rsyncs into production\n",
+				"--up-v-sync 	up versions, rsyncs into prod, & pushes repo\n"
+=======
+				"--up-v-r 		Updates Version and rsyncs\n"
+>>>>>>> 91d8c470c938a88a34a6f9f00adc4adda9dab647
+				);
+					
+	if($arg_count == 1)												# Ensure there is just one argument
+	{											
+		
+		if($arg_one eq "--widget")
+		{
+			dogg_main::main();										# Run the TK Widget
+		}
+		elsif($arg_one eq "--web")										# Run Web interface
+		{
+			my @local = ("x-www-browser localhost");
+			dogg_main::run_commands(@local);			
+		}
+		elsif($arg_one eq "--rsync")
+		{
+<<<<<<< HEAD
+			my @rsync = ("rsync -rtvu --delete /home/louiedogg/projects/louiedogg/ /usr/louiedogg/");
+			dogg_main::run_commands(@rsync);
+		}
+=======
+			my @rsync = ("rsync -rtvu --delete --exclude 'version'/home/louiedogg/projects/louiedogg/ /usr/louiedogg/");
+			dogg_main::run_commands(@rsync);
+		}
+		elsif($arg_one eq "--git_push")
+		{
+			my @git_push = ("git init",
+							"git add .",
+							"git commit -m \"@_\"",
+							"git push https://github.com/louiedogg/louiedogg");
+			dogg_main::run_commands(@git_push);
+			
+		}
+		elsif($arg_one eq "--git_pull")
+		{
+			
+		}
+>>>>>>> 91d8c470c938a88a34a6f9f00adc4adda9dab647
+		elsif($arg_one eq "--help")
+		{
+			print @help;
+		}
+<<<<<<< HEAD
+		elsif($arg_one eq "--up-v-sync")
+=======
+		elsif($arg_one eq "--up-v-r")
+>>>>>>> 91d8c470c938a88a34a6f9f00adc4adda9dab647
+		{
+			print "--up-v-r must have to arguments!\n\n";
+		}
+	}
+	if($arg_count == 2)
+	{
+<<<<<<< HEAD
+		if($arg_one eq "--up-v-sync")
+=======
+		if($arg_one eq "--up-v-r")
+>>>>>>> 91d8c470c938a88a34a6f9f00adc4adda9dab647
+		{
+			dogg_main::update_version($arg_two);
+		}
+	}
+	if(($arg_count > 2) or ($arg_count ==0))
+	{
+		print @help;
+	}
+}
+
+dogg_run(@ARGV);
+
+
